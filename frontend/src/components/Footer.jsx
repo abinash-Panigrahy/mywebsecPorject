@@ -25,10 +25,10 @@ const Footer = () => {
 
         {/* Right Section (Social Icons / Email) */}
         <div className="text-sm text-right md:text-left">
-          <p className="mb-2">Email: <a href="mailto:info@websecverse.com" className="hover:text-pink-400 transition">info@websecverse.com</a></p>
+          <p className="mb-2">Email: <a href="mailto:info@websecverse.com" className="hover:text-pink-400 transition">panigrahyabinash62@gmail.com</a></p>
           <div className="flex justify-end md:justify-start space-x-4 text-xl">
             {/* Placeholder Socials */}
-            <a href="#" className="hover:text-blue-500 transition">🌐</a>
+            <a href="https://www.instagram.com/realabinaxh/" className="hover:text-blue-500 transition">🌐</a>
             <a href="#" className="hover:text-pink-500 transition">📷</a>
             <a href="#" className="hover:text-blue-300 transition">🐦</a>
           </div>
@@ -37,7 +37,7 @@ const Footer = () => {
 
       {/* Bottom Copy */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        © {year} WebSecVerse. All rights reserved.
+        © {year} Abinash. All rights reserved.
       </div>
     </footer>
   );

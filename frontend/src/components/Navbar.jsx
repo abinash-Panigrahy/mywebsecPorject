@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-2xl font-extrabold bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
-          CyberSecVerse
+          Name has to given
         </Link>
 
         {/* Desktop Menu */}
@@ -32,8 +32,8 @@ const Navbar = () => {
             <>
               <Link to="/" className="text-gray-300 hover:text-white transition">Home</Link>
               <Link to="/about" className="text-gray-300 hover:text-white transition">About</Link>
-              <Link to="/login" className="text-blue-400 hover:underline">Login</Link>
-              <Link to="/register" className="text-purple-400 hover:underline">Register</Link>
+              <Link to="/login" className="text-gray-300 hover:underline">Login</Link>
+              <Link to="/register" className="text-gray-300 hover:underline">Register</Link>
             </>
           ) : (
             <>

@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="relative bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-screen text-white overflow-hidden">
+    <div className="">
       {/* Aura background */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-tr from-purple-600 via-pink-500 to-red-500 opacity-20 blur-3xl animate-pulse" />
+      <div className="" />
 
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center py-24 px-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text mb-6">
+        <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-300 to-pink-500 text-transparent bg-clip-text mb-6">
           Build. Secure. Launch.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
@@ -19,9 +19,9 @@ const Home = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             to="/login"
-            className="bg-purple-700 hover:bg-purple-800 text-white px-6 py-3 rounded-lg text-sm font-semibold transition"
+            className="bg-purple-400 hover:bg-purple-800 text-white px-6 py-3 rounded-lg text-sm font-semibold transition"
           >
-            Get Started
+            Get Started 
           </Link>
           <Link
             to="/about"
@@ -64,15 +64,15 @@ const Home = () => {
       </section>
 
       {/* Optional Video Section */}
-      {/* 
+      
       <video
-        className="absolute inset-0 object-cover w-full h-full opacity-10 z-0"
-        src="/assets/your-video.mp4"
+        className="absolute inset-0 object-cover w-full h-full opacity-60 z-0"
+        src="\public\krsnna.mp4"
         autoPlay
         muted
         loop
       /> 
-      */}
+      
     </div>
   );
 };
