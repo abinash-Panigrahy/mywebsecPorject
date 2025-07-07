@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 px-6 py-16 text-white">
+     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 px-6 py-16 text-white">
       {/* Aura background */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 via-pink-500 to-red-500 opacity-20 blur-3xl animate-pulse z-0" />
+       <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 via-pink-500 to-red-500 opacity-20 blur-3xl animate-pulse z-0" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text mb-10">

@@ -67,5 +67,4 @@ const SecurityCatalog = () => {
     </div>
   );
 };
-
 export default SecurityCatalog;
