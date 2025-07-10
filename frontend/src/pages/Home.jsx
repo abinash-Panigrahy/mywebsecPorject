@@ -66,7 +66,7 @@ const Home = () => {
       {/* Optional Video Section */}
       
       <video
-        className="absolute inset-0 object-cover w-full h-full opacity-60 z-0"
+        className="absolute inset-0 object-cover w-full h-full opacity-30 z-0"
         src="/krsnna.mp4"
         autoPlay
         muted
