@@ -1,47 +1,49 @@
+// frontend/src/api/auth.js
+
 import axios from 'axios';
 
-// Base URL of your backend API (adjust as needed)
+// ✅ Axios instance with backend base URL
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // Change this to match your backend port
-  withCredentials: true // If using cookies (optional for JWT via header)
+  baseURL: 'http://localhost:5000/api',
+  withCredentials: false, // Set to true if you use cookies for auth
 });
 
-// Register User
+// ✅ Register new user
 export const registerUser = async (userData) => {
   try {
-    const res = await API.post('/auth/register', userData);
-    return res.data;
+    const response = await API.post('/auth/register', userData);
+    return response.data;
   } catch (error) {
-    throw error.response?.data || { message: 'Registration failed' };
+    throw error.response?.data || { message:'Registration failed' };
   }
 };
 
-// Login User
+// ✅ Login existing user
 export const loginUser = async (userData) => {
   try {
-    const res = await API.post('/auth/login', userData);
-    return res.data;
+    const response = await API.post('/auth/login', userData);
+    return response.data;
   } catch (error) {
     throw error.response?.data || { message: 'Login failed' };
   }
 };
 
-// Logout User (if implemented in backend)
+// ✅ Logout (optional — only if backend has it)
 export const logoutUser = async () => {
   try {
-    const res = await API.post('/auth/logout');
-    return res.data;
+    const response = await API.post('/auth/logout');
+    return response.data;
   } catch (error) {
     throw error.response?.data || { message: 'Logout failed' };
   }
 };
 
-// Get Authenticated User (optional for persisting user)
+// ✅ Get authenticated user (optional — useful for token validation)
 export const getCurrentUser = async () => {
   try {
-    const res = await API.get('/auth/me');
-    return res.data;
+    const response = await API.get('/auth/me');
+    return response.data;
   } catch (error) {
-    return null; // Token invalid or user not logged in
+    return null;
   }
 };
