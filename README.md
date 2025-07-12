@@ -104,7 +104,7 @@ Frontend runs on http://localhost:5173 by default.
 📬 Contact
 If you’d like to use this service or hire us for development or cybersecurity:
 
-📧 Email: [your-email@example.com]
+📧 Email: [panigrahyabinash62@gmail.com]
 
 🌐 Website: Coming soon
 

@@ -6,18 +6,23 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await loginUser({ email, password });
-      localStorage.setItem('token', data.token);
-      navigate('/dashboard');
-    } catch (err) {
-      console.error(err);
-      alert('Invalid login credentials!');
-    }
-  };
+  e.preventDefault();
+
+  try {
+    const res = await loginUser({
+      email: email.toLowerCase().trim(),
+      password,
+    });
+
+    localStorage.setItem('token', res.token); // ✅ store token directly
+    navigate('/dashboard');
+  } catch (err) {
+    console.error("❌ Login error:", err);
+    alert(err?.message || 'Invalid login credentials!');
+  }
+};
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-tr from-gray-900 via-black to-gray-800">
