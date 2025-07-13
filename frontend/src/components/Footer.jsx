@@ -30,14 +30,14 @@ const Footer = () => {
             {/* Placeholder Socials */}
             <a href="https://www.instagram.com/realabinaxh/" className="hover:text-blue-500 transition">🌐</a>
             <a href="#" className="hover:text-pink-500 transition">📷</a>
-            <a href="#" className="hover:text-blue-300 transition">🐦</a>
+            <a href="https://x.com/i/flow/login" className="hover:text-blue-300 transition">🐦</a>
           </div>
         </div>
       </div>
 
       {/* Bottom Copy */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        © {year} Abinash. All rights reserved.
+        © {year} Abinash Panigrahy.All rights reserved.
       </div>
     </footer>
   );
