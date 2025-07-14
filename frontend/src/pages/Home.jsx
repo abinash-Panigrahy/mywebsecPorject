@@ -9,11 +9,11 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center py-24 px-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-300 to-pink-300 text-transparent bg-clip-text mb-6">
+        <h1 className="text-3xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-300 to-pink-300 text-transparent bg-clip-text mb-6">
           Build. Secure. Launch.Repeat.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
-          WebSecVerse provides full-stack web development and industrial-level cybersecurity services to ensure your platform is fast, scalable, and secure.
+          we provide full-stack web development and industrial-level cybersecurity services to ensure your platform is fast, scalable, and secure.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
@@ -67,7 +67,7 @@ const Home = () => {
       
       <video
         className="absolute inset-0 object-cover w-full h-full opacity-30 z-0"
-        src="/krsnna.mp4"
+        src="/myback.mp4"
         autoPlay
         muted
         loop

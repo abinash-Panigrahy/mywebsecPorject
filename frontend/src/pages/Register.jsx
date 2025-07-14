@@ -1,6 +1,8 @@
+// frontend/src/pages/Register.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { registerUser } from '../api/auth'; // ✅ Use correct API helper
 
 const Register = () => {
   const navigate = useNavigate();
@@ -18,25 +20,18 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const { name, email, password } = form;
-
-      // Lowercase the email before sending to backend
-      const res = await axios.post('/api/auth/register', {
-        name,
-        email: email.toLowerCase(),
-        password,
+      const res = await registerUser({
+        name: form.name,
+        email: form.email.toLowerCase().trim(),
+        password: form.password,
       });
 
-      if (res.data.token) {
-        alert('Registration successful! Please log in.');
-        navigate('/login');
+      if (res.token) {
+        localStorage.setItem('token', res.token);
+        navigate('/dashboard');
       }
     } catch (err) {
-      if (err.response?.data?.message) {
-        setError(err.response.data.message);
-      } else {
-        setError('Something went wrong. Please try again.');
-      }
+      setError(err.message || 'Registration failed. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -62,34 +57,32 @@ const Register = () => {
           value={form.name}
           onChange={handleChange}
           placeholder="Name"
-          className="w-full mb-4 p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full mb-4 p-3 rounded bg-gray-800 border border-gray-700"
           required
         />
-
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
           placeholder="Email"
-          className="w-full mb-4 p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full mb-4 p-3 rounded bg-gray-800 border border-gray-700"
           required
         />
-
         <input
           type="password"
           name="password"
           value={form.password}
           onChange={handleChange}
           placeholder="Password"
-          className="w-full mb-6 p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full mb-6 p-3 rounded bg-gray-800 border border-gray-700"
           required
         />
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-3 rounded"
+          className="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded text-white font-semibold transition"
         >
           {loading ? 'Registering...' : 'Register'}
         </button>

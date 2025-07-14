@@ -8,13 +8,13 @@ const About = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto space-y-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
-          About CyberSecVerse
+          About Us
         </h1>
 
         <section className="bg-gray-900 p-6 rounded-xl shadow-lg border border-purple-700">
           <h2 className="text-2xl font-bold mb-4 text-purple-400">Who We Are</h2>
           <p className="text-gray-300 leading-relaxed">
-            CyberSecVerse is a modern tech firm offering world-class web development and cybersecurity solutions. 
+            Wesafe is a modern tech firm offering world-class web development and cybersecurity solutions. 
             Our mission is to provide secure, scalable, and innovative web products to help businesses thrive in the digital age.
           </p>
         </section>
